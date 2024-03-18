@@ -1,0 +1,43 @@
+doctype html
+html 
+    head
+        if background == 'scifi'
+            link(rel="stylesheet" href="/public/styles/scifi.css")
+        else if background == 'fantasy'
+            link(rel="stylesheet" href="/public/styles/fantasy.css")
+        else if background == 'horror'
+            link(rel="stylesheet" href="/public/styles/horror.css")
+        else if background == 'romance'
+            link(rel="stylesheet" href="/public/styles/romance.css")
+        else 
+            link(rel="stylesheet" href="/public/styles/styles.css") 
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+    body 
+        nav.navbar 
+            a(href="/")
+                button.submit-button Home
+            form.nav-form
+                    input#title-input.nav-input(type="text" name="book_title" placeholder="Enter Book Title")
+                    input#author-input.nav-input(type="text" name="author_name" placeholder="Enter an Author")
+                    button.submit-button(type="submit") Search
+            a(href='/loginpage')
+                button.submit-button Log In 
+        br
+        .main-div
+            if failedLogin 
+                p.subheader Invalid username or password. Please try again.
+            else
+                p.subheader Log in to access your reading list and favorite books. If you are new here, sign up to create an account and begin adding books!
+            .form-div
+                form.login-form(action="/login" method="post")
+                    p.subheader Log In
+                    input.main-input(type="text" name="username" placeholder="Enter Username")
+                    input.main-input(type="password" name="password" placeholder="Enter Password")
+                    button.submit-button(type="submit" value="Log In") Login
+                form.account-form(action="/register" method="post")
+                    p.subheader Create an Account
+                    input.main-input(type="text" name="username" placeholder="Create a Username")
+                    input.main-input(type="password" name="password" placeholder="Create a Password")
+                    button.submit-button(type="submit" value="Register") Sign Up
+        footer This is a Portfolio Project created by Jason LaGrasse, est 2024. This application uses the Google Books API for book title searches and the Google Books Embedded Viewer API to render book previews. For author searches, the Open Library API is utilized.
+        script(src="/public/scripts/navscript.js")

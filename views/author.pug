@@ -1,0 +1,48 @@
+doctype html 
+html 
+    head
+        if background == 'scifi'
+            link(rel="stylesheet" href="/public/styles/scifi.css")
+        else if background == 'fantasy'
+            link(rel="stylesheet" href="/public/styles/fantasy.css")
+        else if background == 'horror'
+            link(rel="stylesheet" href="/public/styles/horror.css")
+        else if background == 'romance'
+            link(rel="stylesheet" href="/public/styles/romance.css")
+        else 
+            link(rel="stylesheet" href="/public/styles/styles.css")
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+    body 
+        nav.navbar 
+            a(href="/")
+                button.submit-button Home
+            form.nav-form
+                    input#title-input.nav-input(type="text" name="book_title" placeholder="Enter Book Title")
+                    input#author-input.nav-input(type="text" name="author_name" placeholder="Enter an Author")
+                    button.submit-button(type="submit") Search
+            if validUser
+                a(href='/profile')
+                    button.submit-button Profile
+            else 
+                a(href='/loginpage')
+                    button.submit-button Log In
+        h1 #{authorName} 
+        .main-div3
+            ul.works-list
+                each val in works
+                    a(href="/api/book-info?title="+val+" "+authorName)
+                        li.works-list-element= val
+        .main-div2 
+            h2 Click on a book title to see a description and a preview relating to the book.
+            button#fav-author-btn.submit-button2(value=authorName title="Declare as my favorite author") 
+                i(class="fa-solid fa-star")
+            .form-div
+                form.action-form
+                    .action-form2
+                        input#title-input.main-input(type="text" name="book_title" placeholder="Enter Book Title")
+                        input#author-input.main-input(type="text" name="author_name" placeholder="Enter an Author")
+                    button.submit-button(type="submit") Search
+        script(src="/public/scripts/script.js")
+        script(src="/public/scripts/navscript.js")
+        script(src="/public/scripts/favauthor.js")
+        script(src="https://kit.fontawesome.com/ecb9e33d3c.js" crossorigin="anonymous")

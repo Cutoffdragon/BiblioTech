@@ -1,0 +1,31 @@
+doctype html
+html 
+    head
+        if background == 'scifi'
+            link(rel="stylesheet" href="/public/styles/scifi.css")
+        else if background == 'fantasy'
+            link(rel="stylesheet" href="/public/styles/fantasy.css")
+        else if background == 'horror'
+            link(rel="stylesheet" href="/public/styles/horror.css")
+        else if background == 'romance'
+            link(rel="stylesheet" href="/public/styles/romance.css")
+        else 
+            link(rel="stylesheet" href="/public/styles/styles.css")
+        meta(name="viewport" content="width=device-width, initial-scale=1") 
+    body 
+        nav.navbar 
+            a(href="/")
+                button.submit-button Home
+            form.nav-form
+                input#title-input.nav-input(type="text" name="book_title" placeholder="Enter Book Title")
+                input#author-input.nav-input(type="text" name="author_name" placeholder="Enter an Author")
+                button.submit-button(type="submit") Search
+            a(href='/profile')
+                button.submit-button Profile
+        h1 #{username}'s Finished Book List
+        .main-div 
+            ul.works-list
+                each val in booksFinished
+                    a(href="/api/book-info?title="+val)
+                        li.works-list-element= val
+        script(src="/public/scripts/navscript.js")

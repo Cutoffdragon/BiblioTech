@@ -1,0 +1,58 @@
+doctype html
+html 
+    head
+        if background == 'scifi'
+            link(rel="stylesheet" href="/public/styles/scifi.css")
+        else if background == 'fantasy'
+            link(rel="stylesheet" href="/public/styles/fantasy.css")
+        else if background == 'horror'
+            link(rel="stylesheet" href="/public/styles/horror.css")
+        else if background == 'romance'
+            link(rel="stylesheet" href="/public/styles/romance.css")
+        else 
+            link(rel="stylesheet" href="/public/styles/styles.css") 
+        link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+    body 
+        nav.navbar 
+            a(href="/")
+                button.submit-button Home
+            form.nav-form
+                    input#title-input.nav-input(type="text" name="book_title" placeholder="Enter Book Title")
+                    input#author-input.nav-input(type="text" name="author_name" placeholder="Enter an Author")
+                    button.submit-button(type="submit") Search
+            a(href='/logout')
+                button.submit-button Log Out
+        h1 Hello, #{username}!
+        #user-description
+            p.subheader #{description}
+        .main-div3
+            a(href='/finishedbooks')
+                h2 Books Completed: #{booksFinished}
+            h2 Favorite Genre: #{favoriteGenre}
+            a(href="/api/book-info?title="+favoriteBook)
+                h2 Favorite Book: #{favoriteBook}
+            a(href="/api/author-info?author=$"+favoriteAuthor) 
+                h2 Favorite Author: #{favoriteAuthor}
+            a(href='/info')
+                button.submit-button Preferences
+        .main-div2
+            h2 Reading List 
+            if bookList.length == 0
+                p.subheader Looks like your book list is empty. Time to explore books and add them to your reading list! Can't think of any books at the moment? Search an author to see a list of works you may be interested in.
+            else 
+                p.subheader Manage your book list by checking off the books you have completed, or deleting the books you no longer plan to read.
+                ul.works-list
+                    each val in bookList
+                        .book-div
+                            a(href="/api/book-info?title="+val)
+                                li=val
+                            div(style="display:flex;flex-direction:row;justify-content:center")
+                                form(action="/bookcomplete" method="post")
+                                    button.submit-button2.checkmark(type="submit" name="bookTitle" value=val title="I've completed this book")
+                                        i(class="fa-solid fa-check")
+                                form(action="/bookremove" method="post")
+                                    button.submit-button2.xmark(type="submit" name="bookTitle" value=val title="Remove from book list")
+                                        i(class="fa-solid fa-xmark")
+        script(src="/public/scripts/navscript.js")
+        script(src="https://kit.fontawesome.com/ecb9e33d3c.js" crossorigin="anonymous")
