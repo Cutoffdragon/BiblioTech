@@ -8,8 +8,8 @@ const session = require('express-session');
 const myDB = require('./db_connection.js')
 const MongoStore = require('connect-mongo');
 const LocalStrategy = require('passport-local').Strategy;
-const User = require("./models")
-const routes = require('./routes')
+const User = require("./models.js")
+const routes = require('./routes.js')
 const apiRoutes = require('./api.js');
 const app = express()
 
