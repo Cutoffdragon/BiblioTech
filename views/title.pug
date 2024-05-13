@@ -19,7 +19,7 @@ html(xmlns="http://www.w3.org/1999/xhtml")
             form.nav-form
                     input#title-input.nav-input(type="text" name="book_title" placeholder="Enter Book Title")
                     input#author-input.nav-input(type="text" name="author_name" placeholder="Enter an Author")
-                    button.submit-button(type="submit") Search
+                    button#nav-submit.submit-button(type="submit") Search
             if validUser
                 a(href='/profile')
                     button.submit-button Profile
@@ -31,7 +31,12 @@ html(xmlns="http://www.w3.org/1999/xhtml")
             script(type="text/javascript" src="https://books.google.com/books/previewlib.js")
             script(type="text/javascript").
                 let bookQuery = !{bookISBN}
-                GBS_insertEmbeddedViewer(bookQuery,540,700);
+                var viewportWidth = window.innerWidth || document.documentElement.clientWidth;
+                if (viewportWidth > 600) {
+                    GBS_insertEmbeddedViewer(bookQuery,540,700)
+                } else {
+                    GBS_insertPreviewButtonLink(bookQuery);
+                }
         .main-div2
             a(href="/api/author-info?author=$"+author_result) 
                 p.subheader Author: #{author_result}
