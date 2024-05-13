@@ -52,7 +52,7 @@ module.exports = (app) => {
         if (err) next(err);
     });
 
-    app.get('/loginfail', async function(req, res) {
+    app.get('/loginfail', async function (req, res) {
         res.render('loginpage', { failedLogin: true })
     })
 
@@ -78,7 +78,7 @@ module.exports = (app) => {
         if (req.isAuthenticated()) {
             const doc = await User.findOne({ username: req.session['passport']['user'] });
             if (doc.favoriteGenre !== "None") {
-                res.render('info', {username: req.session['passport']['user'], newUser: false})
+                res.render('info', { username: req.session['passport']['user'], newUser: false })
             } else {
                 res.render('info', { username: req.session['passport']['user'], newUser: true })
             }
@@ -93,8 +93,10 @@ module.exports = (app) => {
     });
 
     app.get('/redirect', async function (req, res) {
-        const doc = await User.findOne({ username: req.session['passport']['user'] });
-        await doc.save();
+        if (req.isAuthenticated()) {
+            const doc = await User.findOne({ username: req.session['passport']['user'] });
+            await doc.save();
+        };
         res.redirect('/profile')
     })
 
