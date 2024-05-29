@@ -10,8 +10,10 @@ body {
 h1 {
     color: rgba(171, 10, 10, 0.9);
     font-size: 89px;
-    font-family: Copperplate, Papyrus, fantasy;
-    -webkit-text-stroke-width: 0px;
+    font-family: "Creepster", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    -webkit-text-stroke-width: 6px;
     -webkit-text-stroke-color: black;
     animation: fadeIn 1s;
     margin-top: 20px;

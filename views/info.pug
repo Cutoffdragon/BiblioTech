@@ -2,11 +2,16 @@ doctype html
 html 
     head
         if background == 'scifi'
+            link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+            link(href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet")
             link(rel="stylesheet" href="/public/styles/scifi.css")
         else if background == 'fantasy'
             link(rel="stylesheet" href="/public/styles/fantasy.css")
         else if background == 'horror'
             link(rel="stylesheet" href="/public/styles/horror.css")
+            link(rel="preconnect" href="https://fonts.googleapis.com")
+            link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+            link(href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet")
         else if background == 'romance'
             link(rel="stylesheet" href="/public/styles/romance.css")
         else 
