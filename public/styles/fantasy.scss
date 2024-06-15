@@ -1,0 +1,54 @@
+$headerColor: rgba(68, 255, 174, 0.9);
+$focusColor: rgb(96, 249, 150);
+$buttonColor: rgba(187, 109, 255, 0.911);
+$divBackground: rgba(253, 216, 252, 0.9);
+$bookDivBackground: rgb(78, 251, 214);
+$navbarColor: linear-gradient(0deg, rgba(231, 255, 109, 0.9) 0%, rgba(64, 254, 146, 0.9) 100%);
+
+
+body {
+    background-image: url("../assets/fantasybackground.png");
+}
+
+h1 {
+    color: $headerColor;
+    font-family: 'Harrington', fantasy;
+    font-weight: 700;
+    -webkit-text-stroke-width: 0.000001px;
+    -webkit-text-stroke-color: rgb(0, 116, 4);
+}
+
+.main-input:hover,
+.main-input:focus {
+    background-color: $focusColor;
+    transform: scale(1.1);
+}
+
+.nav-input:hover,
+.nav-input:focus {
+    background-color: $focusColor;
+    transform: scale(1.1);
+}
+
+.submit-button {
+    background-color: $buttonColor;
+    font-family: 'Optima', sans-serif;
+    color: white;
+}
+
+.submit-button2 {
+    background-color: $buttonColor;
+    color: white;
+}
+
+.main-div, .main-div2, .main-div3, #user-description {
+    background-color: $divBackground;
+}
+
+.book-div {
+    background-color: $bookDivBackground;
+}
+
+.navbar {
+    background: $navbarColor;
+}

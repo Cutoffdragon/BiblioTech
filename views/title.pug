@@ -1,6 +1,7 @@
 doctype html "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"
 html(xmlns="http://www.w3.org/1999/xhtml") 
     head
+        link(rel="stylesheet" href="/public/styles/styles.css")
         if background == 'scifi'
             link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
             link(href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet")
@@ -15,7 +16,7 @@ html(xmlns="http://www.w3.org/1999/xhtml")
         else if background == 'romance'
             link(rel="stylesheet" href="/public/styles/romance.css")
         else 
-            link(rel="stylesheet" href="/public/styles/styles.css")
+            link(rel="stylesheet" href="/public/styles/default.css")
         meta(name="viewport" content="width=device-width, initial-scale=1")
     body 
         nav.navbar 

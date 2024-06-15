@@ -1,0 +1,55 @@
+$headerColor: rgba(171, 10, 10, 0.9);
+$focusColor: rgb(253, 92, 92);
+$buttonColor: rgba(0, 0, 0, 0.911);
+$divBackground: rgba(186, 180, 175, 0.9);
+$bookDivBackground: rgb(199, 109, 109);
+$navbarColor: linear-gradient(0deg, rgba(134, 5, 5, 0.9) 0%, rgba(96, 1, 1, 0.9) 100%);
+
+
+body {
+    background-image: url("../assets/horrorbackground.png");
+}
+
+h1 {
+    color: $headerColor;
+    font-family: "Creepster", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    -webkit-text-stroke-width: 6px;
+    -webkit-text-stroke-color: black;
+}
+
+.main-input:hover,
+.main-input:focus {
+    background-color: $focusColor;
+    transform: scale(1.1);
+}
+
+.nav-input:hover,
+.nav-input:focus {
+    background-color: $focusColor;
+    transform: scale(1.1);
+}
+
+.submit-button {
+    background-color: $buttonColor;
+    font-family: Copperplate, Papyrus, fantasy;
+    color: white;
+}
+
+.submit-button2 {
+    background-color: $buttonColor;
+    color: white;
+}
+
+.main-div, .main-div2, .main-div3, #user-description {
+    background-color: $divBackground;
+}
+
+.book-div {
+    background-color: $bookDivBackground;
+}
+
+.navbar {
+    background: $navbarColor;
+}

@@ -1,443 +1,46 @@
 body {
-    background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/48e118d3-81d4-494f-9908-5999ec492498/dgbgweg-d5e40ac2-9906-4074-8e86-a9e92d7c4d64.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzQ4ZTExOGQzLTgxZDQtNDk0Zi05OTA4LTU5OTllYzQ5MjQ5OFwvZGdiZ3dlZy1kNWU0MGFjMi05OTA2LTQwNzQtOGU4Ni1hOWU5MmQ3YzRkNjQuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.iKEvhLGxfUxlwzznRhLqW4iYaG4nyaRzlMM398qOFOM");
-    background-size: cover;
-    text-align: center;
-    margin: 0px 0px 15px 0px;
-    padding: 0px;
-    overflow-x: hidden;
+  background-image: url("../assets/fantasybackground.png");
 }
 
 h1 {
-    color: rgba(68, 255, 174, 0.9);
-    font-size: 89px;
-    font-family: 'Harrington', fantasy;
-    font-weight: 700;
-    -webkit-text-stroke-width: 0.000001px;
-    -webkit-text-stroke-color: rgb(0, 116, 4);
-    animation: fadeIn 1s;
-    margin-top: 20px;
-}
-
-h2 {
-    color: black;
-    font-size: 46px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-}
-
-.main-input {
-    width: 300px;
-    height: 40px;
-    font-size: 30px;
-    text-align: center;
-    border: 2px solid black;
-    border-radius: 13px;
-    margin: 20px;
-    transition: all 0.2s ease-out;
+  color: rgba(68, 255, 174, 0.9);
+  font-family: "Harrington", fantasy;
+  font-weight: 700;
+  -webkit-text-stroke-width: 0.000001px;
+  -webkit-text-stroke-color: rgb(0, 116, 4);
 }
 
 .main-input:hover,
 .main-input:focus {
-    background-color: rgb(96, 249, 150);
-    width: 320px;
-}
-
-#description {
-    width: 500px;
-    height: 200px;
-    font-size: 30px;
-    border: 2px solid black;
-    border-radius: 13px;
-    margin: 20px;
-}
-
-.nav-input {
-    width: auto;
-    height: auto;
-    font-size: 15px;
-    text-align: center;
-    border: 2px solid black;
-    border-radius: 13px;
-    margin: 0px 15px 0px;
-    transition: all 0.2s ease-out;
+  background-color: rgb(96, 249, 150);
+  transform: scale(1.1);
 }
 
 .nav-input:hover,
 .nav-input:focus {
-    background-color: rgb(96, 249, 150);
+  background-color: rgb(96, 249, 150);
+  transform: scale(1.1);
 }
 
 .submit-button {
-    width: 135px;
-    height: 30px;
-    margin: 10px;
-    border-radius: 13px;
-    background-color: rgba(187, 109, 255, 0.911);
-    border: 2px solid black;
-    font-size: 20px;
-    font-family: 'Optima', sans-serif;
-    font-weight: bold;
-    color: white;
-    cursor: pointer;
-    transition: all 0.2s ease-out;
+  background-color: rgba(187, 109, 255, 0.911);
+  font-family: "Optima", sans-serif;
+  color: white;
 }
 
 .submit-button2 {
-    width: 40px;
-    height: 40px;
-    margin: 15px;
-    border-radius: 160px;
-    border: 2px solid black;
-    background-color: rgba(187, 109, 255, 0.911);
-    color: white;
-    cursor: pointer;
-    transition: all 0.2s ease-out;
+  background-color: rgba(187, 109, 255, 0.911);
+  color: white;
 }
 
-.submit-button:hover,
-.submit-button:focus {
-    background-color: rgb(49, 186, 78);
-    width: 145px;
-}
-
-.submit-button2:hover,
-.submit-button2:focus {
-    background-color: rgb(49, 186, 78);
-}
-
-.xmark:hover,
-.xmark:focus {
-    background-color: rgb(255, 32, 32);
-}
-
-.main-div {
-    background-color: rgba(253, 216, 252, 0.9);
-    position: relative;
-    margin: auto;
-    width: 63%;
-    padding: 15px;
-    border: 3px solid black;
-    border-radius: 13px;
-    animation: fadeIn 2s;
+.main-div, .main-div2, .main-div3, #user-description {
+  background-color: rgba(253, 216, 252, 0.9);
 }
 
 .book-div {
-    background-color: rgb(78, 251, 214);
-    position: relative;
-    margin: auto auto 15px auto;
-    width: 80%;
-    height: auto;
-    border: 3px solid black;
-    border-radius: 13px;
-    animation: fadeIn 2s;
-}
-
-#user-description {
-    background-color: rgba(253, 216, 252, 0.9);
-    position: relative;
-    width: auto;
-    padding: 15px;
-    margin: 10px;
-    border: 3px solid black;
-    border-radius: 13px;
-    animation: fadeIn 2s;
-}
-
-.main-div2 {
-    background-color: rgba(253, 216, 252, 0.9);
-    position: relative;
-    float: right;
-    width: 55%;
-    padding: 20px;
-    border: 3px solid black;
-    border-radius: 13px;
-    margin-bottom: 15px;
-    margin-right: 10px;
-    animation: fadeIn 2s;
-}
-
-.main-div3 {
-    background-color: rgba(253, 216, 252, 0.9);
-    position: relative;
-    float: left;
-    width: 35%;
-    padding: 20px;
-    border: 3px solid black;
-    border-radius: 13px;
-    margin-bottom: 15px;
-    margin-left: 10px;
-    animation: fadeIn 2s;
-}
-
-.action-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 5px;
-}
-
-.action-form2 {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 5px;
-}
-
-.subheader {
-    font-size: 30px;
-    font-family: 'Optima', sans-serif;
-    font-weight: bold;
-}
-
-#title_description {
-    font-size: 20px;
-    color: black;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    line-height: 1.5;
-}
-
-.form-div {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-
-#preview-div {
-    float: left;
-    width: 35%;
-    height: 90%;
-    background-image: url("https://worksheetprints.com/wp-content/uploads/2022/12/default-preview.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    margin: 0px 0px 15px 10px;
-    animation: fadeIn 2s;
-}
-
-.works-list {
-    font-size: 40px;
-    list-style: none;
-    line-height: 74px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-}
-
-a {
-    text-decoration: none;
-    transition-property: font-size;
-    transition-duration: 4s;
-    transition-delay: 2s;
-    transition: all 0.4s;
-}
-
-a:hover {
-    color: rgb(49, 186, 78)
+  background-color: rgb(78, 251, 214);
 }
 
 .navbar {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    background: linear-gradient(0deg, rgba(231, 255, 109, 0.9) 0%, rgba(64, 254, 146, 0.9) 100%);
-    height: 45px;
-    width: 100%;
-    border: 3px solid black;
-    padding: 5px;
-}
-
-@keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-  }
-
-footer {
-    margin: 15px;
-    color: white;
-}
-
-@media (max-width: 1100px) {
-    
-    h1 {
-        color: rgba(68, 255, 174, 0.9);
-        font-size: 45px;
-        font-family: 'Harrington', fantasy;
-        -webkit-text-stroke-width: 0px;
-        -webkit-text-stroke-color: black;
-        animation: fadeIn 1s;
-        margin-top: 20px;
-    }
-
-    h2 {
-        color: black;
-        font-size: 26px;
-        font-family: Georgia, 'Times New Roman', Times, serif;
-    }
-
-    .main-input {
-        width: 170px;
-        height: 40px;
-        font-size: 15px;
-        text-align: center;
-        border: 2px solid black;
-        border-radius: 13px;
-        margin: 20px;
-        transition: all 0.2s ease-out;
-    }
-
-    .main-input:hover,
-    .main-input:focus {
-        background-color: rgb(96, 249, 150);
-        width: 190px;
-    }
-
-    #description {
-        width: 170px;
-        font-size: 15px;
-    }
-
-    select {
-        width: 170px;
-        height: 40px;
-        font-size: 15px;
-        text-align: center;
-        border: 2px solid black;
-        border-radius: 13px;
-        margin: 20px;
-        transition: all 0.2s ease-out;
-    }
-
-    .subheader {
-        font-size: 25px;
-        font-family: 'Optima', sans-serif;
-        font-weight: bold;
-    }
-
-    .navbar {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        background: linear-gradient(0deg, rgba(231, 255, 109, 0.9) 0%, rgba(64, 254, 146, 0.9) 100%);
-        height: 70px;
-        width: 100%;
-        border: 3px solid black;
-        padding: 3px;
-    }
-
-    .nav-input {
-        opacity: 0;
-        width: 0px;
-        height: 0px;
-        font-size: 15px;
-        text-align: center;
-        border: 2px solid black;
-        border-radius: 13px;
-        margin: 0px 15px 0px;
-        transition: all 0.2s ease-out;
-    }
-
-    #nav-submit {
-        width: 0px;
-        height: 0px;
-        opacity: 0;
-    }
-
-    .submit-button {
-        width: 120px;
-        height: 40px;
-        margin: 15px;
-        border-radius: 13px;
-        border: 2px solid black;
-        background-color: rgba(187, 109, 255, 0.911);
-        font-size: 18px;
-        font-family: 'Optima', sans-serif;
-        font-weight: bold;
-        color: white;
-        cursor: pointer;
-        transition: all 0.2s ease-out;
-    }
-
-    footer {
-        margin-top: 15px;
-        color: white;
-    }
-
-    .main-div2 {
-        background-color: rgba(253, 216, 252, 0.9);
-        width: auto;
-        padding: 10px;
-        border: 3px solid black;
-        border-radius: 13px;
-        margin-bottom: 15px;
-        margin-left: 10px;
-        animation: fadeIn 2s;
-    }
-
-    .main-div3 {
-        background-color: rgba(253, 216, 252, 0.9);
-        width: 89%;
-        padding: 10px;
-        border: 3px solid black;
-        border-radius: 13px;
-        margin-bottom: 15px;
-        margin-left: 10px;
-        animation: fadeIn 2s;
-    }
-
-    #preview-div {
-        width: 95%;
-        height: 70px;
-        background-image: none;
-        background-size: cover;
-        background-repeat: no-repeat;
-        animation: fadeIn 2s;
-    }
-
-    .works-list {
-        font-size: 20px;
-        margin-right: 17px;
-        list-style: none;
-        line-height: 40px;
-        font-family: Georgia, 'Times New Roman', Times, serif;
-    }
-
-    .action-form {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 5px;
-    }
-    
-    .action-form2 {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 5px;
-    }
-
-    #user-description {
-        background-color: rgba(253, 216, 252, 0.9);
-        position: relative;
-        width: auto;
-        padding: 15px;
-        margin: 10px;
-        border: 3px solid black;
-        border-radius: 13px;
-        animation: fadeIn 2s;
-    }
-
-    .book-div {
-        background-color: rgb(78, 251, 214);
-        position: relative;
-        margin: auto auto 15px 14px;
-        width: 80%;
-        height: auto;
-        border: 3px solid black;
-        border-radius: 13px;
-        animation: fadeIn 2s;
-    }
-
-    .form-div {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-    }
-    
-    
-}
+  background: linear-gradient(0deg, rgba(231, 255, 109, 0.9) 0%, rgba(64, 254, 146, 0.9) 100%);
+}/*# sourceMappingURL=fantasy.css.map */

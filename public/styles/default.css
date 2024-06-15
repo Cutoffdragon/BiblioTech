@@ -1,0 +1,45 @@
+body {
+  background-image: url("../assets/background.png");
+}
+
+h1 {
+  color: rgba(255, 251, 149, 0.9);
+  font-family: Georgia, "Times New Roman", Times, serif;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: black;
+}
+
+.main-input:hover,
+.main-input:focus {
+  background-color: rgb(237, 234, 160);
+  transform: scale(1.1);
+}
+
+.nav-input:hover,
+.nav-input:focus {
+  background-color: rgb(237, 234, 160);
+  transform: scale(1.1);
+}
+
+.submit-button {
+  background-color: rgba(59, 144, 236, 0.911);
+  font-family: "Optima", sans-serif;
+  color: white;
+}
+
+.submit-button2 {
+  background-color: rgba(59, 144, 236, 0.911);
+  color: white;
+}
+
+.main-div, .main-div2, .main-div3, #user-description {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.book-div {
+  background-color: rgb(165, 199, 235);
+}
+
+.navbar {
+  background: linear-gradient(0deg, rgba(255, 221, 117, 0.9) 0%, rgba(237, 234, 160, 0.9) 100%);
+}/*# sourceMappingURL=default.css.map */

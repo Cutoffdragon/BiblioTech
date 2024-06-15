@@ -1,0 +1,53 @@
+$headerColor: rgba(252, 255, 66, 0.9);
+$focusColor: rgb(253, 142, 255);
+$buttonColor: rgba(255, 0, 212, 0.911);
+$divBackground: rgba(255, 255, 255, 0.9);
+$bookDivBackground: rgb(221, 235, 165);
+$navbarColor: linear-gradient(0deg, rgba(255, 163, 209, 0.9) 0%, rgba(255, 251, 136, 0.9) 100%);
+
+
+body {
+    background-image: url("../assets/romancebackground.png");
+}
+
+h1 {
+    color: $headerColor;
+    font-family: "Brush Script MT", cursive;
+    -webkit-text-stroke-width: 0.2px;
+    -webkit-text-stroke-color: black;
+}
+
+.main-input:hover,
+.main-input:focus {
+    background-color: $focusColor;
+    transform: scale(1.1);
+}
+
+.nav-input:hover,
+.nav-input:focus {
+    background-color: $focusColor;
+    transform: scale(1.1);
+}
+
+.submit-button {
+    background-color: $buttonColor;
+    font-family: "Brush Script MT", cursive;
+    color: white;
+}
+
+.submit-button2 {
+    background-color: $buttonColor;
+    color: white;
+}
+
+.main-div, .main-div2, .main-div3, #user-description {
+    background-color: $divBackground;
+}
+
+.book-div {
+    background-color: $bookDivBackground;
+}
+
+.navbar {
+    background: $navbarColor;
+}
