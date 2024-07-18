@@ -4,34 +4,72 @@
 }
 
 body {
-    background-size: cover;
     text-align: center;
-    margin: 0px 0px 15px 0px;
+    margin: 0px;
     padding: 0px;
     overflow-x: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.2);
+    z-index: -1;
+
 }
 
 h1 {
     font-size: 89px;
     animation: fadeIn 1s;
-    margin-top: 20px;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    text-shadow: 0px 0px 5px black;
 }
 
 h2 {
-    color: black;
+    color: white;
     font-size: 46px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Optima', sans-serif;
+    font-weight: bold;
+    text-shadow:
+    0 0 5px rgba(0, 0, 0, 0.8),
+    0 0 10px rgba(0, 0, 0, 0.8),
+    0 0 15px rgba(0, 0, 0, 0.8),
+    0 0 20px rgba(0, 0, 0, 0.8),
+    0 0 30px rgba(161, 161, 161, 0.8),
+    0 0 40px rgba(162, 162, 162, 0.9),
+    0 0 50px rgba(255, 255, 255, 1);
 }
 
 .subheader {
-    font-size: 30px;
+    color: white;
+    font-size: 40px;
     font-family: 'Optima', sans-serif;
     font-weight: bold;
+    text-shadow:
+        0 0 5px rgba(0, 0, 0, 0.8),
+        0 0 10px rgba(0, 0, 0, 0.8),
+        0 0 15px rgba(0, 0, 0, 0.8),
+        0 0 20px rgba(0, 0, 0, 0.8),
+        0 0 30px rgba(161, 161, 161, 0.8),
+        0 0 40px rgba(162, 162, 162, 0.9),
+        0 0 50px rgba(255, 255, 255, 1);
+}
+
+.description {
+    @extend h2;
 }
 
 #title_description {
-    font-size: 20px;
+    font-size: 30px;
     color: black;
+    text-shadow: 0px 0px 5px white;
     font-family: Georgia, 'Times New Roman', Times, serif;
     line-height: 1.5;
 }
@@ -55,7 +93,6 @@ select {
     height: 200px;
     font-size: 30px;
     @include border(2px);
-    margin: 20px;
 }
 
 .nav-input {
@@ -64,8 +101,8 @@ select {
     font-size: 15px;
     text-align: center;
     @include border(2px);
-    margin: 0px 15px 0px;
     transition: all 0.2s;
+    margin: 0px 15px 0px;
 }
 
 .submit-button {
@@ -91,7 +128,7 @@ select {
 
 .submit-button:hover,
 .submit-button:focus {
-    background-color: rgb(49, 186, 78);
+    color: rgb(49, 186, 78);
     transform: scale(1.1);
 }
 
@@ -108,11 +145,9 @@ select {
 }
 
 .main-div {
-    position: relative;
-    margin: auto;
-    width: 63%;
+    margin: -40px auto auto auto;
+    width: 85%;
     padding: 15px;
-    @include border(3px);
     animation: fadeIn 2s;
 }
 
@@ -132,6 +167,14 @@ select {
     padding: 20px;
     margin-bottom: 15px;
     margin-left: 10px;
+}
+
+#titleDiv {
+    height: 400px;
+    overflow-y: auto;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 13px;
+
 }
 
 .book-div {
@@ -167,6 +210,13 @@ select {
     justify-content: space-around;
 }
 
+.login-form,
+.account-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 #preview-div {
     float: left;
     width: 540px;
@@ -179,10 +229,20 @@ select {
 }
 
 .works-list {
-    font-size: 40px;
     list-style: none;
     line-height: 74px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 40px;
+}
+
+.works-list-element {
+    @extend .description;
+    transition: all .2s;
+    margin-block: 40px;
+
+    &:hover {
+        transform: scale(1.1);
+        color: rgb(49, 186, 78);
+    }
 }
 
 a {
@@ -201,9 +261,10 @@ a:hover {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    height: 45px;
+    align-items: center;
+    height: 65px;
     width: 100%;
-    border: 3px solid black;
+    border-bottom: 3px solid black;
     padding: 5px;
 }
 
@@ -217,9 +278,30 @@ a:hover {
     }
 }
 
-footer {
-    margin: 15px;
+.footer {
+    bottom: 0;
+    left: 0;
+    color: black;
+    padding: 1px;
+    height: 100%;
+    width: 100%;
+    border-top: 3px solid black;
+    font-family: 'Optima', sans-serif;
+}
+
+.footerText {
+    font-family: 'Optima', sans-serif;
     color: white;
+    font-size: 32px;
+    font-weight: bold;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+
+.flexContainer {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 @media (max-width: 1100px) {
@@ -346,6 +428,10 @@ footer {
         display: flex;
         flex-direction: column;
         justify-content: space-around;
+    }
+
+    .footerText {
+        font-size: 18px;
     }
 
 

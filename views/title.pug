@@ -1,5 +1,5 @@
-doctype html "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"
-html(xmlns="http://www.w3.org/1999/xhtml") 
+doctype html
+html 
     head
         link(rel="stylesheet" href="/public/styles/styles.css")
         if background == 'scifi'
@@ -22,6 +22,7 @@ html(xmlns="http://www.w3.org/1999/xhtml")
             link(rel="stylesheet" href="/public/styles/default.css")
         meta(name="viewport" content="width=device-width, initial-scale=1")
     body 
+        #overlay
         nav.navbar 
             a(href="/")
                 button.submit-button Home
@@ -49,7 +50,8 @@ html(xmlns="http://www.w3.org/1999/xhtml")
         .main-div2
             a(href="/api/author-info?author=$"+author_result) 
                 p.subheader Author: #{author_result}
-            p#title_description #{description}
+            #titleDiv
+                p#title_description #{description}
             button#list-button.submit-button2(value=title_result title="Add to my reading list")
                 i(class="fa-solid fa-book")
             button#fav-book-btn.submit-button2(value=author_result title="Declare as my favorite book")

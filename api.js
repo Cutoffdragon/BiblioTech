@@ -65,7 +65,9 @@ module.exports = function (app) {
             const authorInfo = await getAuthorWorks(authorName);
             let worksArray = [];
             for (let i = 0; i < authorInfo["docs"].length || i <= 5; i++) {
-                worksArray.push(authorInfo["docs"][i]["title"])
+                if(authorInfo["docs"][i]["title"]) {
+                    worksArray.push(authorInfo["docs"][i]["title"])
+                }
             }
             if (req.isAuthenticated()) {
                 const doc = await User.findOne({ username: req.session['passport']['user'] });

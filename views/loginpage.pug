@@ -22,6 +22,7 @@ html
             link(rel="stylesheet" href="/public/styles/default.css") 
         meta(name="viewport" content="width=device-width, initial-scale=1")
     body 
+        #overlay
         nav.navbar 
             a(href="/")
                 button.submit-button Home
@@ -48,5 +49,4 @@ html
                     input.main-input(type="text" name="username" placeholder="Create a Username")
                     input.main-input(type="password" name="password" placeholder="Create a Password")
                     button.submit-button(type="submit" value="Register") Sign Up
-        footer This is a Portfolio Project created by Jason LaGrasse, est 2024. This application uses the Google Books API for book title searches and the Google Books Embedded Viewer API to render book previews. For author searches, the Open Library API is utilized.
         script(src="/public/scripts/navscript.js")

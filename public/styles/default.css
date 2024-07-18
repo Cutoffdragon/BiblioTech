@@ -1,12 +1,16 @@
 body {
   background-image: url("../assets/background.png");
+  background-color: rgba(226, 226, 226, 0.9);
+  background-blend-mode: darken, luminosity;
 }
 
 h1 {
   color: rgba(255, 251, 149, 0.9);
   font-family: Georgia, "Times New Roman", Times, serif;
-  -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: black;
+}
+
+.description {
+  color: rgba(255, 251, 149, 0.9);
 }
 
 .main-input:hover,
@@ -32,14 +36,10 @@ h1 {
   color: white;
 }
 
-.main-div, .main-div2, .main-div3, #user-description {
-  background-color: rgba(255, 255, 255, 0.9);
-}
-
 .book-div {
   background-color: rgb(165, 199, 235);
 }
 
-.navbar {
+.navbar, .footer {
   background: linear-gradient(0deg, rgba(255, 221, 117, 0.9) 0%, rgba(237, 234, 160, 0.9) 100%);
 }/*# sourceMappingURL=default.css.map */

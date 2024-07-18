@@ -23,6 +23,7 @@ html
         link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
         meta(name="viewport" content="width=device-width, initial-scale=1")
     body 
+        #overlay
         nav.navbar 
             a(href="/")
                 button.submit-button Home
@@ -34,15 +35,19 @@ html
                 button.submit-button Log Out
         h1 Hello, #{username}!
         #user-description
-            p.subheader #{description}
+            p.description #{description}
         .main-div3
             a(href='/finishedbooks')
-                h2 Books Completed: #{booksFinished}
-            h2 Favorite Genre: #{favoriteGenre}
+                h2 Books Completed: 
+                    span.description #{booksFinished}
+            h2 Favorite Genre: 
+                span.description #{favoriteGenre}
             a(href="/api/book-info?title="+favoriteBook)
-                h2 Favorite Book: #{favoriteBook}
+                h2 Favorite Book: 
+                    span.description #{favoriteBook}
             a(href="/api/author-info?author=$"+favoriteAuthor) 
-                h2 Favorite Author: #{favoriteAuthor}
+                h2 Favorite Author: 
+                    span.description #{favoriteAuthor}
             a(href='/info')
                 button.submit-button Preferences
         .main-div2

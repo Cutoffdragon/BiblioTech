@@ -8,6 +8,8 @@ $navbarColor: linear-gradient(0deg, rgba(174, 147, 240, 0.9) 0%, rgba(154, 89, 2
 
 body {
     background-image: url("../assets/scifibackground.png");
+    background-color: rgba(205, 56, 163, 0.5);
+    background-blend-mode: lighten, color-burn;
 }
 
 h1 {
@@ -18,6 +20,10 @@ h1 {
     font-style: normal;
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: black;
+}
+
+.description {
+    color: $headerColor;
 }
 
 .main-input:hover,
@@ -43,14 +49,10 @@ h1 {
     color: white;
 }
 
-.main-div, .main-div2, .main-div3, #user-description {
-    background-color: $divBackground;
-}
-
 .book-div {
     background-color: $bookDivBackground;
 }
 
-.navbar {
+.navbar, .footer {
     background: $navbarColor;
 }
