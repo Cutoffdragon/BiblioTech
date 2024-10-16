@@ -287,6 +287,7 @@ a:hover {
     width: 100%;
     border-top: 3px solid black;
     font-family: 'Optima', sans-serif;
+    visibility: hidden;
 }
 
 .footerText {
@@ -368,6 +369,7 @@ a:hover {
 
     footer {
         margin-top: 15px;
+        visibility: visible;
     }
 
     .main-div2 {
