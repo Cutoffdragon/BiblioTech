@@ -124,14 +124,15 @@ h2, .description, .works-list-element {
   transform: scale(1.1);
 }
 
-.main-div, #user-description, .main-div3, .main-div2 {
-  margin: -40px auto auto auto;
+.main-div {
+  margin: auto;
   width: 85%;
   padding: 15px;
   animation: fadeIn 2s;
 }
 
 .main-div2 {
+  animation: fadeIn 2s;
   float: right;
   width: 50%;
   padding: 20px;
@@ -139,6 +140,7 @@ h2, .description, .works-list-element {
 }
 
 .main-div3 {
+  animation: fadeIn 2s;
   float: left;
   width: 35%;
   padding: 20px;
@@ -259,7 +261,6 @@ a:hover {
   position: fixed;
   color: black;
   padding: 1px;
-  height: 15%;
   width: 100%;
   border-top: 3px solid black;
   font-family: "Optima", sans-serif;
@@ -345,7 +346,6 @@ a:hover {
   .main-div3 {
     width: 89%;
     padding: 10px;
-    margin-bottom: 15px;
     margin-left: 10px;
   }
   #preview-div {
@@ -395,7 +395,7 @@ a:hover {
   }
 }
 @media (max-width: 400px) {
-  .main-div, .main-div2, .main-div3, #user-description {
+  .main-div {
     min-height: 100vh;
   }
 }/*# sourceMappingURL=styles.css.map */

@@ -149,14 +149,14 @@ select {
 }
 
 .main-div {
-    margin: -40px auto auto auto;
+    margin: auto;
     width: 85%;
     padding: 15px;
     animation: fadeIn 2s;
 }
 
 .main-div2 {
-    @extend .main-div;
+    animation: fadeIn 2s;
     float: right;
     width: 50%;
     padding: 20px;
@@ -164,7 +164,7 @@ select {
 }
 
 .main-div3 {
-    @extend .main-div;
+    animation: fadeIn 2s;
     float: left;
     width: 35%;
     padding: 20px;
@@ -190,7 +190,6 @@ select {
 }
 
 #user-description {
-    @extend .main-div;
     width: auto;
     margin: 10px;
 }
@@ -291,7 +290,6 @@ a:hover {
     position: fixed;
     color: black;
     padding: 1px;
-    height: 15%;
     width: 100%;
     border-top: 3px solid black;
     font-family: 'Optima', sans-serif;
@@ -390,7 +388,6 @@ a:hover {
     .main-div3 {
         width: 89%;
         padding: 10px;
-        margin-bottom: 15px;
         margin-left: 10px;
     }
 
