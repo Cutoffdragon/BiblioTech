@@ -37,32 +37,33 @@ html
                 a(href='/loginpage')
                     button.submit-button Log In
         h1 "#{title_result}"
-        #preview-div
-            script(type="text/javascript" src="https://books.google.com/books/previewlib.js")
-            script(type="text/javascript").
-                let bookQuery = !{bookISBN}
-                var viewportWidth = window.innerWidth || document.documentElement.clientWidth;
-                if (viewportWidth > 600) {
-                    GBS_insertEmbeddedViewer(bookQuery,540,700)
-                } else {
-                    GBS_insertPreviewButtonLink(bookQuery);
-                }
-        .main-div2
-            a(href="/api/author-info?author=$"+author_result) 
-                p.subheader Author: #{author_result}
-            #titleDiv
-                p#title_description #{description}
-            button#list-button.submit-button2(value=title_result title="Add to my reading list")
-                i(class="fa-solid fa-book")
-            button#fav-book-btn.submit-button2(value=author_result title="Declare as my favorite book")
-                i(class="fa-solid fa-star")
-            h2 Search Again!
-            .form-div
-                form.action-form
-                    .action-form2
-                        input#title-input.main-input(type="text" name="book_title" placeholder="Enter Book Title")
-                        input#author-input.main-input(type="text" name="author_name" placeholder="Enter an Author")
-                    button.submit-button(type="submit") Search
+        .horizontal-div
+            #preview-div
+                script(type="text/javascript" src="https://books.google.com/books/previewlib.js")
+                script(type="text/javascript").
+                    let bookQuery = !{bookISBN}
+                    var viewportWidth = window.innerWidth || document.documentElement.clientWidth;
+                    if (viewportWidth > 600) {
+                        GBS_insertEmbeddedViewer(bookQuery,540,700)
+                    } else {
+                        GBS_insertPreviewButtonLink(bookQuery);
+                    }
+            .main-div2
+                a(href="/api/author-info?author=$"+author_result) 
+                    p.subheader Author: #{author_result}
+                #titleDiv
+                    p#title_description #{description}
+                button#list-button.submit-button2(value=title_result title="Add to my reading list")
+                    i(class="fa-solid fa-book")
+                button#fav-book-btn.submit-button2(value=author_result title="Declare as my favorite book")
+                    i(class="fa-solid fa-star")
+                h2 Search Again!
+                .form-div
+                    form.action-form
+                        .action-form2
+                            input#title-input.main-input(type="text" name="book_title" placeholder="Enter Book Title")
+                            input#author-input.main-input(type="text" name="author_name" placeholder="Enter an Author")
+                        button.submit-button(type="submit") Search
         script(src="/public/scripts/script.js")
         script(src="/public/scripts/navscript.js")
         script(src="/public/scripts/booklist.js")

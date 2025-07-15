@@ -2,6 +2,8 @@
 
 **Full stack library application with Google Books Api integration and user authentication.**
 
+⚠️ Note: This application was my first full-stack build and is no longer actively maintained. It represents my foundational learning in full-stack architecture, API integration, and session-based authentication.
+
 ---
 
 ## 🧾 Description

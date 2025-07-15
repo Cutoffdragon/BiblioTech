@@ -10,6 +10,7 @@ body {
     overflow-x: hidden;
     background-size: cover;
     background-repeat: no-repeat;
+    width: 100%;
     height: 100%;
 }
 
@@ -27,8 +28,6 @@ body {
 h1 {
     font-size: 89px;
     animation: fadeIn 1s;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: black;
     text-shadow: 0px 0px 5px black;
 }
 
@@ -75,7 +74,7 @@ h2 {
 }
 
 .main-input {
-    width: 300px;
+    width: 15rem;
     height: 40px;
     font-size: 30px;
     text-align: center;
@@ -154,10 +153,9 @@ select {
 .main-div2 {
     @extend .main-div;
     float: right;
-    width: 55%;
+    width: 50%;
     padding: 20px;
     margin-bottom: 15px;
-    margin-right: 10px;
 }
 
 .main-div3 {
@@ -218,13 +216,12 @@ select {
 }
 
 #preview-div {
-    float: left;
     width: 540px;
     height: 700px;
     background-image: url("https://worksheetprints.com/wp-content/uploads/2022/12/default-preview.png");
     background-size: cover;
     background-repeat: no-repeat;
-    margin: 0px 0px 15px 10px;
+    margin: auto;
     animation: fadeIn 2s;
 }
 
@@ -268,6 +265,11 @@ a:hover {
     padding: 5px;
 }
 
+.horizontal-div {
+    display: flex;
+    flex-direction: row;
+}
+
 @keyframes fadeIn {
     0% {
         opacity: 0;
@@ -281,13 +283,13 @@ a:hover {
 .footer {
     bottom: 0;
     left: 0;
+    position: fixed;
     color: black;
     padding: 1px;
-    height: 100%;
+    height: 15%;
     width: 100%;
     border-top: 3px solid black;
     font-family: 'Optima', sans-serif;
-    visibility: hidden;
 }
 
 .footerText {
@@ -297,6 +299,7 @@ a:hover {
     font-weight: bold;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: black;
+    text-align: center;
 }
 
 .flexContainer {
@@ -306,6 +309,10 @@ a:hover {
 }
 
 @media (max-width: 1100px) {
+
+    body {
+        height: 100vh;
+    }
 
     h1 {
         font-size: 35px;
@@ -436,5 +443,18 @@ a:hover {
         font-size: 18px;
     }
 
+    .horizontal-div {
+        flex-direction: column;
+    }
+}
 
+@media (max-width: 400px) {
+
+    .footer {
+        position: relative;
+    }
+
+    body {
+        height: 100%;
+    }
 }
