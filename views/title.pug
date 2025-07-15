@@ -43,7 +43,7 @@ html
                 script(type="text/javascript").
                     let bookQuery = !{bookISBN}
                     var viewportWidth = window.innerWidth || document.documentElement.clientWidth;
-                    if (viewportWidth > 600) {
+                    if (viewportWidth > 1100) {
                         GBS_insertEmbeddedViewer(bookQuery,540,700)
                     } else {
                         GBS_insertPreviewButtonLink(bookQuery);
