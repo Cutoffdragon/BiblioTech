@@ -182,7 +182,8 @@ select {
 
 .book-div {
     position: relative;
-    margin: auto auto 15px auto;
+    margin-inline: auto;
+    margin-block: 10px;
     width: 80%;
     height: auto;
     @include border(3px);
@@ -192,6 +193,7 @@ select {
 #user-description {
     width: auto;
     margin: 10px;
+    padding: 10px;
 }
 
 .action-form {
@@ -426,7 +428,6 @@ a:hover {
 
     .book-div {
         position: relative;
-        margin: auto auto 15px 14px;
         width: 80%;
         height: auto;
     }
@@ -446,7 +447,7 @@ a:hover {
     }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 500px) {
 
     .main-div {
         min-height: 100vh;
